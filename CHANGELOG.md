@@ -4,7 +4,7 @@ All notable changes to this package are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the package uses
 [semantic versioning](https://semver.org/). While the version is `0.x`, a breaking change bumps the minor version.
 
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-10-08
 
 First public release.
 
@@ -22,3 +22,5 @@ First public release.
 - `FetchAdapter`, the default adapter, with request, response and error interceptors.
 - Error classes shared by every adapter: `JsonapiError`, `JsonapiResponseError` (status, decoded document and client
   response), `JsonapiDocumentError` and `JsonapiNetworkError`.
+
+[0.1.0]: https://github.com/VGirol/jsonapi-ts/releases/tag/v0.1.0

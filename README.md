@@ -22,7 +22,7 @@ building, and an HTTP client that works over `fetch` or any other HTTP library t
 npm install @vgirol/jsonapi-ts
 ```
 
-The package is ESM only. It runs on Node 20+ and in recent browsers, and has one dependency, `ts-deepmerge`.
+The package is ESM only. It runs on Node 22+ and in recent browsers, and has one dependency, `ts-deepmerge`.
 
 ## Quick start
 

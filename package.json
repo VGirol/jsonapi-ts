@@ -1,0 +1,69 @@
+{
+  "name": "@vgirol/jsonapi-ts",
+  "version": "0.1.0",
+  "description": "A typed JSON:API client for TypeScript: models, (de)serialization, URL building, and an HTTP client with a fetch adapter.",
+  "keywords": [
+    "jsonapi",
+    "json-api",
+    "typescript",
+    "client",
+    "fetch"
+  ],
+  "homepage": "https://github.com/VGirol/jsonapi-ts#readme",
+  "bugs": {
+    "url": "https://github.com/VGirol/jsonapi-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VGirol/jsonapi-ts.git"
+  },
+  "license": "MIT",
+  "author": "Vincent Girol",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "run type-check && run build-only && run api:check",
+    "build-only": "vite build",
+    "api:check": "api-extractor run",
+    "api:update": "api-extractor run --local",
+    "type-check": "tsc --noEmit --composite false",
+    "format": "prettier --config .prettierrc.json 'src/' --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "ts-deepmerge": "^7.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@microsoft/api-extractor": "^7.50.1",
+    "@types/node": "^25.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.2",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^4.0.18"
+  },
+  "packageManager": "yarn@4.14.1"
+}
